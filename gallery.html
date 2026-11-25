@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Media Gallery – Dr. S Prem Shankar</title>
+<meta name="description" content="Media and photo gallery of Dr. S Prem Shankar, Chairman, Holy Sai Group of Institutions – awards, events, dignitaries and community work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--card:#141414;--line:#262626;--text:#fff;--ink2:#e6e6e6;--muted:#a3a3a3;--dim:#6b6b6b;--head:"Archivo Narrow","Arial Narrow",system-ui,sans-serif;--body:"Poppins",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:300 15px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+.nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:6px;padding:6px;border:1px solid #ffffff1a;border-radius:999px;background:#0a0a0acc;backdrop-filter:blur(14px)}
+.nav a{white-space:nowrap;padding:8px 16px;border-radius:999px;font-size:13px;color:#cfcfcf;transition:.25s}
+.nav a:hover,.nav a.here{background:#ffffff14;color:#fff}
+.nav .brand{display:flex;align-items:center;gap:8px;color:#fff;font-weight:500}
+.nav .brand i{width:26px;height:26px;border-radius:50%;background:url(images/author.jpeg) center/cover;display:block}
+.nav a.cta{background:#fff;color:#000}.nav a.cta:hover{background:#d9d9d9}
+@media (max-width:640px){.nav a:not(.brand):not(.cta){display:none}}
+header.top{padding:150px 0 70px;position:relative;overflow:hidden}
+header.top::before{content:"";position:absolute;inset:0;background:url(images/media/m45.jpg) center/cover;opacity:.18;filter:grayscale(.4);-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+header.top .wrap{position:relative}
+.back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;margin-bottom:26px;transition:.2s}
+.back:hover{color:#fff}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#ddd}
+h1{font:700 clamp(46px,7vw,104px)/.95 var(--head);text-transform:uppercase;letter-spacing:-.01em;margin:14px 0 18px}
+.lead{color:var(--muted);max-width:560px}
+.lead b{color:#fff;font-weight:500}
+.chips{position:sticky;top:0;z-index:30;background:#000000e6;backdrop-filter:blur(10px);padding:76px 0 16px;margin-top:-56px;border-bottom:1px solid #ffffff10}
+.chips .wrap{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
+.chip{flex:none;padding:10px 18px;border-radius:999px;border:1px solid #333;background:#0d0d0d;color:#cfcfcf;font:500 13px var(--body);cursor:pointer;transition:.2s}
+.chip i{font-style:normal;color:var(--dim);margin-left:4px}
+.chip:hover{border-color:#777;color:#fff}
+.chip.on{background:#fff;color:#000;border-color:#fff}.chip.on i{color:#555}
+.grid{columns:3 300px;column-gap:22px;padding:10px 24px 110px}
+.alb{break-inside:avoid;margin:0 0 30px;cursor:pointer;outline:none}
+.alb.hide{display:none}
+.cv{position:relative;border-radius:16px;overflow:hidden;background:#111}
+.alb.stack .cv{box-shadow:8px 8px 0 -2px #1c1c1c,16px 16px 0 -4px #141414}
+.alb.stack{margin-right:16px;margin-bottom:46px}
+.cv img{width:100%;height:auto;transition:transform .8s ease,filter .4s}
+.alb:hover .cv img,.alb:focus-visible .cv img{transform:scale(1.04)}
+.alb:focus-visible .cv{outline:2px solid #fff;outline-offset:3px}
+.cnt{position:absolute;top:12px;right:12px;padding:5px 11px;border-radius:999px;background:#000b;backdrop-filter:blur(6px);font-size:12px;font-weight:500}
+.alb figcaption{margin-top:12px;font-size:14px;line-height:1.45;color:var(--ink2)}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--dim);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:#cfcfcf}
+/* viewer */
+.vw{position:fixed;inset:0;z-index:100;background:#000f;display:none;grid-template-rows:auto 1fr auto auto}
+.vw.open{display:grid}
+.vw-top{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;color:var(--muted);font-size:13px;letter-spacing:.1em}
+.vw-x{width:44px;height:44px;border-radius:50%;border:1px solid #333;background:#111;color:#fff;font-size:24px;cursor:pointer}
+.vw-x:hover{background:#fff;color:#000}
+.vw-stage{position:relative;min-height:0;display:flex;align-items:center;justify-content:center;padding:0 90px}
+.vw-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;transition:opacity .25s}
+.vw-stage img.fade{opacity:0}
+.vw-b{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid #ffffff40;background:#111c;color:#fff;font-size:26px;cursor:pointer;transition:.2s}
+.vw-b:hover:not(:disabled){background:#fff;color:#000}
+.vw-b:disabled{opacity:.2;cursor:default}
+.vw-p{left:22px}.vw-n{right:22px}
+.vw-cap{text-align:center;padding:16px 24px 6px;font-size:15px;color:var(--ink2);max-width:900px;margin:0 auto}
+.vw-th{display:flex;gap:8px;justify-content:center;overflow-x:auto;padding:10px 24px 22px}
+.vw-th button{flex:none;width:72px;height:52px;border-radius:8px;overflow:hidden;border:2px solid transparent;opacity:.45;padding:0;background:#111;cursor:pointer}
+.vw-th button img{width:100%;height:100%;object-fit:cover}
+.vw-th button.on{opacity:1;border-color:#fff}
+@media (max-width:700px){.vw-stage{padding:0 12px}.vw-b{width:42px;height:42px;font-size:20px;background:#000a}.vw-p{left:10px}.vw-n{right:10px}.vw-th{justify-content:flex-start}.grid{columns:2 150px;column-gap:14px}.alb figcaption{font-size:12.5px}.alb.stack{margin-right:10px}.alb.stack .cv{box-shadow:5px 5px 0 -1px #1c1c1c,10px 10px 0 -2px #141414}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="brand"><i></i>Prem Shankar</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#journal">Journal</a>
+  <a href="gallery.html" class="here" aria-current="page">Media</a>
+  <a href="index.html#connect" class="cta">Connect</a>
+</nav>
+
+<header class="top">
+  <div class="wrap">
+    <a class="back" href="index.html#gallery">← Back to home</a>
+    <div class="eyebrow">Media &amp; Photo Gallery</div>
+    <h1>Moments from<br>the journey</h1>
+    <p class="lead"><b>76 photos</b> across <b>35 moments</b> — awards, ceremonies, dignitaries and community work. Tap any album to see every photo.</p>
+  </div>
+</header>
+
+<div class="chips"><div class="wrap" role="toolbar" aria-label="Filter albums"><button class="chip on" data-f="all">All <i>35</i></button><button class="chip" data-f="awards">Awards &amp; Recognition <i>5</i></button><button class="chip" data-f="events">Events &amp; Ceremonies <i>14</i></button><button class="chip" data-f="dignitaries">Dignitaries <i>13</i></button><button class="chip" data-f="community">Community <i>3</i></button></div></div>
+
+<main class="wrap grid" id="grid">
+<figure class="alb" data-cat="dignitaries" data-i="0" tabindex="0" role="button" aria-label="With Mr. S. Jagathrakshakan, Lok Sabha MP"><div class="cv"><img src="images/media/m01.jpg" alt="With Mr. S. Jagathrakshakan, Lok Sabha MP" loading="lazy"></div><figcaption>With Mr. S. Jagathrakshakan, Lok Sabha MP</figcaption></figure>
+<figure class="alb stack" data-cat="events" data-i="1" tabindex="0" role="button" aria-label="Addressing @ Mind and Matter – 4 photos"><div class="cv"><img src="images/media/m02.jpg" alt="Addressing @ Mind and Matter" loading="lazy"><span class="cnt">4 photos</span></div><figcaption>Addressing @ Mind and Matter</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="2" tabindex="0" role="button" aria-label="With Thiru.J.C.D.Prabhakar, Hon’ble Speaker, Tamil Nadu Legislative Assembly"><div class="cv"><img src="images/media/m06.jpg" alt="With Thiru.J.C.D.Prabhakar, Hon’ble Speaker, Tamil Nadu Legislative Assembly" loading="lazy"></div><figcaption>With Thiru.J.C.D.Prabhakar, Hon’ble Speaker, Tamil Nadu Legislative Assembly</figcaption></figure>
+<figure class="alb" data-cat="events" data-i="3" tabindex="0" role="button" aria-label="With Thiru Aadhav Arjuna Minister for Public Works and Sports Development, Government of Tamil Nadu"><div class="cv"><img src="images/media/m07.jpg" alt="With Thiru Aadhav Arjuna Minister for Public Works and Sports Development, Government of Tamil Nadu" loading="lazy"></div><figcaption>With Thiru Aadhav Arjuna Minister for Public Works and Sports Development, Government of Tamil Nadu</figcaption></figure>
+<figure class="alb stack" data-cat="events" data-i="4" tabindex="0" role="button" aria-label="Investiture Ceremony&#x27;26 @ Holy Sai International School – 8 photos"><div class="cv"><img src="images/media/m08.jpg" alt="Investiture Ceremony&#x27;26 @ Holy Sai International School" loading="lazy"><span class="cnt">8 photos</span></div><figcaption>Investiture Ceremony&#x27;26 @ Holy Sai International School</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="5" tabindex="0" role="button" aria-label="Honouring Mr. T.M.Anbarasan, Minister for MS&amp;ME Government of Tamil Nadu on the inauguration of Holy Sai Basketball Turf"><div class="cv"><img src="images/media/m16.jpg" alt="Honouring Mr. T.M.Anbarasan, Minister for MS&amp;ME Government of Tamil Nadu on the inauguration of Holy Sai Basketball Turf" loading="lazy"></div><figcaption>Honouring Mr. T.M.Anbarasan, Minister for MS&amp;ME Government of Tamil Nadu on the inauguration of Holy Sai Basketball Turf</figcaption></figure>
+<figure class="alb" data-cat="events" data-i="6" tabindex="0" role="button" aria-label="Honouring Mr. Anbil Mahesh Poyyamozhi, the School Education Minister of Tamil Nadu on the occasion of our Grand Annual Event 2025"><div class="cv"><img src="images/media/m17.jpg" alt="Honouring Mr. Anbil Mahesh Poyyamozhi, the School Education Minister of Tamil Nadu on the occasion of our Grand Annual Event 2025" loading="lazy"></div><figcaption>Honouring Mr. Anbil Mahesh Poyyamozhi, the School Education Minister of Tamil Nadu on the occasion of our Grand Annual Event 2025</figcaption></figure>
+<figure class="alb" data-cat="awards" data-i="7" tabindex="0" role="button" aria-label="Award from Educational Minister Mr. Sengottaiyan"><div class="cv"><img src="images/media/m18.jpg" alt="Award from Educational Minister Mr. Sengottaiyan" loading="lazy"></div><figcaption>Award from Educational Minister Mr. Sengottaiyan</figcaption></figure>
+<figure class="alb stack" data-cat="awards" data-i="8" tabindex="0" role="button" aria-label="School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd – 9 photos"><div class="cv"><img src="images/media/m19.jpg" alt="School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd" loading="lazy"><span class="cnt">9 photos</span></div><figcaption>School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd</figcaption></figure>
+<figure class="alb stack" data-cat="awards" data-i="9" tabindex="0" role="button" aria-label="UDSFSA Annual Awards 2026 – 13 photos"><div class="cv"><img src="images/media/m28.jpg" alt="UDSFSA Annual Awards 2026" loading="lazy"><span class="cnt">13 photos</span></div><figcaption>UDSFSA Annual Awards 2026</figcaption></figure>
+<figure class="alb stack" data-cat="awards" data-i="10" tabindex="0" role="button" aria-label="7th International Robotics Competition 2026 by Robotica – 4 photos"><div class="cv"><img src="images/media/m41.jpg" alt="7th International Robotics Competition 2026 by Robotica" loading="lazy"><span class="cnt">4 photos</span></div><figcaption>7th International Robotics Competition 2026 by Robotica</figcaption></figure>
+<figure class="alb" data-cat="events" data-i="11" tabindex="0" role="button" aria-label="At the Cambridge Schools South Asia Conclave 2024"><div class="cv"><img src="images/media/m45.jpg" alt="At the Cambridge Schools South Asia Conclave 2024" loading="lazy"></div><figcaption>At the Cambridge Schools South Asia Conclave 2024</figcaption></figure>
+<figure class="alb" data-cat="events" data-i="12" tabindex="0" role="button" aria-label="During the Victoria State, Australia tour 2023-24"><div class="cv"><img src="images/media/m46.jpg" alt="During the Victoria State, Australia tour 2023-24" loading="lazy"></div><figcaption>During the Victoria State, Australia tour 2023-24</figcaption></figure>
+<figure class="alb" data-cat="events" data-i="13" tabindex="0" role="button" aria-label="Handing over first copy of Holy Sai Group of Institutions Prospectus 2024-25 to the Hon’ble Educational Minister"><div class="cv"><img src="images/media/m47.jpg" alt="Handing over first copy of Holy Sai Group of Institutions Prospectus 2024-25 to the Hon’ble Educational Minister" loading="lazy"></div><figcaption>Handing over first copy of Holy Sai Group of Institutions Prospectus 2024-25 to the Hon’ble Educational Minister</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="14" tabindex="0" role="button" aria-label="Felicitating Mr. Padappai M. Manoharan, Secretary-DMK, Kundrathur Union"><div class="cv"><img src="images/media/m48.jpg" alt="Felicitating Mr. Padappai M. Manoharan, Secretary-DMK, Kundrathur Union" loading="lazy"></div><figcaption>Felicitating Mr. Padappai M. Manoharan, Secretary-DMK, Kundrathur Union</figcaption></figure>
+<figure class="alb" data-cat="events" data-i="15" tabindex="0" role="button" aria-label="In discussion with Education Minister, Mr.Anbil Mahesh and Cambridge International Education CEO, Mr. Peter Philips and other leadership teams"><div class="cv"><img src="images/media/m49.jpg" alt="In discussion with Education Minister, Mr.Anbil Mahesh and Cambridge International Education CEO, Mr. Peter Philips and other leadership teams" loading="lazy"></div><figcaption>In discussion with Education Minister, Mr.Anbil Mahesh and Cambridge International Education CEO, Mr. Peter Philips and other leadership teams</figcaption></figure>
+<figure class="alb" data-cat="events" data-i="16" tabindex="0" role="button" aria-label="Signing of MoU with Sai University in the presence of Mr. Ramani, Chancellor &amp; Dr. Vivek Shivhare, Founding Director-Admissions"><div class="cv"><img src="images/media/m50.jpg" alt="Signing of MoU with Sai University in the presence of Mr. Ramani, Chancellor &amp; Dr. Vivek Shivhare, Founding Director-Admissions" loading="lazy"></div><figcaption>Signing of MoU with Sai University in the presence of Mr. Ramani, Chancellor &amp; Dr. Vivek Shivhare, Founding Director-Admissions</figcaption></figure>
+<figure class="alb" data-cat="awards" data-i="17" tabindex="0" role="button" aria-label="Award for Integrating Technology in Education from Eldrok India"><div class="cv"><img src="images/media/m51.jpg" alt="Award for Integrating Technology in Education from Eldrok India" loading="lazy"></div><figcaption>Award for Integrating Technology in Education from Eldrok India</figcaption></figure>
+<figure class="alb" data-cat="community" data-i="18" tabindex="0" role="button" aria-label="Connect’ing with nature @ Holy Sai OLC farm"><div class="cv"><img src="images/media/m52.jpg" alt="Connect’ing with nature @ Holy Sai OLC farm" loading="lazy"></div><figcaption>Connect’ing with nature @ Holy Sai OLC farm</figcaption></figure>
+<figure class="alb" data-cat="events" data-i="19" tabindex="0" role="button" aria-label="Sports Day 2024 celebrations @ Chennai campus"><div class="cv"><img src="images/media/m53.jpg" alt="Sports Day 2024 celebrations @ Chennai campus" loading="lazy"></div><figcaption>Sports Day 2024 celebrations @ Chennai campus</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="20" tabindex="0" role="button" aria-label="Felicitating Dr. Raja Hussain, the Registrar of Crescent University @ Chennai campus"><div class="cv"><img src="images/media/m54.jpg" alt="Felicitating Dr. Raja Hussain, the Registrar of Crescent University @ Chennai campus" loading="lazy"></div><figcaption>Felicitating Dr. Raja Hussain, the Registrar of Crescent University @ Chennai campus</figcaption></figure>
+<figure class="alb" data-cat="community" data-i="21" tabindex="0" role="button" aria-label="2018 – Kerala floods relief materials support"><div class="cv"><img src="images/media/m55.jpg" alt="2018 – Kerala floods relief materials support" loading="lazy"></div><figcaption>2018 – Kerala floods relief materials support</figcaption></figure>
+<figure class="alb stack" data-cat="community" data-i="22" tabindex="0" role="button" aria-label="2015 Chennai Floods Camps – 4 photos"><div class="cv"><img src="images/media/m56.jpg" alt="2015 Chennai Floods Camps" loading="lazy"><span class="cnt">4 photos</span></div><figcaption>2015 Chennai Floods Camps</figcaption></figure>
+<figure class="alb stack" data-cat="events" data-i="23" tabindex="0" role="button" aria-label="Addressing in TV channels – 2 photos"><div class="cv"><img src="images/media/m60.jpg" alt="Addressing in TV channels" loading="lazy"><span class="cnt">2 photos</span></div><figcaption>Addressing in TV channels</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="24" tabindex="0" role="button" aria-label="Honouring Educational Minister Mr. Vaigai Selvan – 2012"><div class="cv"><img src="images/media/m62.jpg" alt="Honouring Educational Minister Mr. Vaigai Selvan – 2012" loading="lazy"></div><figcaption>Honouring Educational Minister Mr. Vaigai Selvan – 2012</figcaption></figure>
+<figure class="alb stack" data-cat="dignitaries" data-i="25" tabindex="0" role="button" aria-label="Receiving Mr. Thangam Thennarasu, Education Minister - 2009 – 2 photos"><div class="cv"><img src="images/media/m63.jpg" alt="Receiving Mr. Thangam Thennarasu, Education Minister - 2009" loading="lazy"><span class="cnt">2 photos</span></div><figcaption>Receiving Mr. Thangam Thennarasu, Education Minister - 2009</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="26" tabindex="0" role="button" aria-label="With Mr. Ramakrishnan, State President of Communist Party of India"><div class="cv"><img src="images/media/m65.jpg" alt="With Mr. Ramakrishnan, State President of Communist Party of India" loading="lazy"></div><figcaption>With Mr. Ramakrishnan, State President of Communist Party of India</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="27" tabindex="0" role="button" aria-label="Felicitating Mr. Vikrama Raja, State President of Merchant Association"><div class="cv"><img src="images/media/m66.jpg" alt="Felicitating Mr. Vikrama Raja, State President of Merchant Association" loading="lazy"></div><figcaption>Felicitating Mr. Vikrama Raja, State President of Merchant Association</figcaption></figure>
+<figure class="alb" data-cat="events" data-i="28" tabindex="0" role="button" aria-label="Sports Meet 2019"><div class="cv"><img src="images/media/m67.jpg" alt="Sports Meet 2019" loading="lazy"></div><figcaption>Sports Meet 2019</figcaption></figure>
+<figure class="alb stack" data-cat="events" data-i="29" tabindex="0" role="button" aria-label="Addressing in Various Institutions – 2 photos"><div class="cv"><img src="images/media/m68.jpg" alt="Addressing in Various Institutions" loading="lazy"><span class="cnt">2 photos</span></div><figcaption>Addressing in Various Institutions</figcaption></figure>
+<figure class="alb stack" data-cat="events" data-i="30" tabindex="0" role="button" aria-label="Representing Tamil Nadu state at Cambridge Community Meet in Bangalore – 3 photos"><div class="cv"><img src="images/media/m70.jpg" alt="Representing Tamil Nadu state at Cambridge Community Meet in Bangalore" loading="lazy"><span class="cnt">3 photos</span></div><figcaption>Representing Tamil Nadu state at Cambridge Community Meet in Bangalore</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="31" tabindex="0" role="button" aria-label="Receiving Director of School Education Dr.Kannapan"><div class="cv"><img src="images/media/m73.jpg" alt="Receiving Director of School Education Dr.Kannapan" loading="lazy"></div><figcaption>Receiving Director of School Education Dr.Kannapan</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="32" tabindex="0" role="button" aria-label="With Honourable MP Mr. Kamal Hassan"><div class="cv"><img src="images/media/m74.jpg" alt="With Honourable MP Mr. Kamal Hassan" loading="lazy"></div><figcaption>With Honourable MP Mr. Kamal Hassan</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="33" tabindex="0" role="button" aria-label="With Mr. M.S. Shanmugam IAS, Secretary to the Chief Minister of Tamil Nadu"><div class="cv"><img src="images/media/m75.jpg" alt="With Mr. M.S. Shanmugam IAS, Secretary to the Chief Minister of Tamil Nadu" loading="lazy"></div><figcaption>With Mr. M.S. Shanmugam IAS, Secretary to the Chief Minister of Tamil Nadu</figcaption></figure>
+<figure class="alb" data-cat="dignitaries" data-i="34" tabindex="0" role="button" aria-label="With Mr. V. Irai Anbu IAS, Chief Secretary, Government of Tamil Nadu"><div class="cv"><img src="images/media/m76.jpg" alt="With Mr. V. Irai Anbu IAS, Chief Secretary, Government of Tamil Nadu" loading="lazy"></div><figcaption>With Mr. V. Irai Anbu IAS, Chief Secretary, Government of Tamil Nadu</figcaption></figure>
+</main>
+
+<footer><div class="wrap"><span>© 2026 premshankar.in · All Rights Reserved.</span><a href="index.html">← Back to home</a></div></footer>
+
+<div class="vw" id="vw" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="vw-top"><span id="vwCount"></span><button class="vw-x" id="vwX" aria-label="Close">×</button></div>
+  <div class="vw-stage"><button class="vw-b vw-p" id="vwP" aria-label="Previous photo">‹</button><img id="vwImg" alt=""><button class="vw-b vw-n" id="vwN" aria-label="Next photo">›</button></div>
+  <p class="vw-cap" id="vwCap"></p>
+  <div class="vw-th" id="vwTh"></div>
+</div>
+
+<script>
+const A=[{"c": "With Mr. S. Jagathrakshakan, Lok Sabha MP", "p": ["images/media/m01.jpg"]}, {"c": "Addressing @ Mind and Matter", "p": ["images/media/m02.jpg", "images/media/m03.jpg", "images/media/m04.jpg", "images/media/m05.jpg"]}, {"c": "With Thiru.J.C.D.Prabhakar, Hon’ble Speaker, Tamil Nadu Legislative Assembly", "p": ["images/media/m06.jpg"]}, {"c": "With Thiru Aadhav Arjuna Minister for Public Works and Sports Development, Government of Tamil Nadu", "p": ["images/media/m07.jpg"]}, {"c": "Investiture Ceremony'26 @ Holy Sai International School", "p": ["images/media/m08.jpg", "images/media/m09.jpg", "images/media/m10.jpg", "images/media/m11.jpg", "images/media/m12.jpg", "images/media/m13.jpg", "images/media/m14.jpg", "images/media/m15.jpg"]}, {"c": "Honouring Mr. T.M.Anbarasan, Minister for MS&ME Government of Tamil Nadu on the inauguration of Holy Sai Basketball Turf", "p": ["images/media/m16.jpg"]}, {"c": "Honouring Mr. Anbil Mahesh Poyyamozhi, the School Education Minister of Tamil Nadu on the occasion of our Grand Annual Event 2025", "p": ["images/media/m17.jpg"]}, {"c": "Award from Educational Minister Mr. Sengottaiyan", "p": ["images/media/m18.jpg"]}, {"c": "School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd", "p": ["images/media/m19.jpg", "images/media/m20.jpg", "images/media/m21.jpg", "images/media/m22.jpg", "images/media/m23.jpg", "images/media/m24.jpg", "images/media/m25.jpg", "images/media/m26.jpg", "images/media/m27.jpg"]}, {"c": "UDSFSA Annual Awards 2026", "p": ["images/media/m28.jpg", "images/media/m29.jpg", "images/media/m30.jpg", "images/media/m31.jpg", "images/media/m32.jpg", "images/media/m33.jpg", "images/media/m34.jpg", "images/media/m35.jpg", "images/media/m36.jpg", "images/media/m37.jpg", "images/media/m38.jpg", "images/media/m39.jpg", "images/media/m40.jpg"]}, {"c": "7th International Robotics Competition 2026 by Robotica", "p": ["images/media/m41.jpg", "images/media/m42.jpg", "images/media/m43.jpg", "images/media/m44.jpg"]}, {"c": "At the Cambridge Schools South Asia Conclave 2024", "p": ["images/media/m45.jpg"]}, {"c": "During the Victoria State, Australia tour 2023-24", "p": ["images/media/m46.jpg"]}, {"c": "Handing over first copy of Holy Sai Group of Institutions Prospectus 2024-25 to the Hon’ble Educational Minister", "p": ["images/media/m47.jpg"]}, {"c": "Felicitating Mr. Padappai M. Manoharan, Secretary-DMK, Kundrathur Union", "p": ["images/media/m48.jpg"]}, {"c": "In discussion with Education Minister, Mr.Anbil Mahesh and Cambridge International Education CEO, Mr. Peter Philips and other leadership teams", "p": ["images/media/m49.jpg"]}, {"c": "Signing of MoU with Sai University in the presence of Mr. Ramani, Chancellor & Dr. Vivek Shivhare, Founding Director-Admissions", "p": ["images/media/m50.jpg"]}, {"c": "Award for Integrating Technology in Education from Eldrok India", "p": ["images/media/m51.jpg"]}, {"c": "Connect’ing with nature @ Holy Sai OLC farm", "p": ["images/media/m52.jpg"]}, {"c": "Sports Day 2024 celebrations @ Chennai campus", "p": ["images/media/m53.jpg"]}, {"c": "Felicitating Dr. Raja Hussain, the Registrar of Crescent University @ Chennai campus", "p": ["images/media/m54.jpg"]}, {"c": "2018 – Kerala floods relief materials support", "p": ["images/media/m55.jpg"]}, {"c": "2015 Chennai Floods Camps", "p": ["images/media/m56.jpg", "images/media/m57.jpg", "images/media/m58.jpg", "images/media/m59.jpg"]}, {"c": "Addressing in TV channels", "p": ["images/media/m60.jpg", "images/media/m61.jpg"]}, {"c": "Honouring Educational Minister Mr. Vaigai Selvan – 2012", "p": ["images/media/m62.jpg"]}, {"c": "Receiving Mr. Thangam Thennarasu, Education Minister - 2009", "p": ["images/media/m63.jpg", "images/media/m64.jpg"]}, {"c": "With Mr. Ramakrishnan, State President of Communist Party of India", "p": ["images/media/m65.jpg"]}, {"c": "Felicitating Mr. Vikrama Raja, State President of Merchant Association", "p": ["images/media/m66.jpg"]}, {"c": "Sports Meet 2019", "p": ["images/media/m67.jpg"]}, {"c": "Addressing in Various Institutions", "p": ["images/media/m68.jpg", "images/media/m69.jpg"]}, {"c": "Representing Tamil Nadu state at Cambridge Community Meet in Bangalore", "p": ["images/media/m70.jpg", "images/media/m71.jpg", "images/media/m72.jpg"]}, {"c": "Receiving Director of School Education Dr.Kannapan", "p": ["images/media/m73.jpg"]}, {"c": "With Honourable MP Mr. Kamal Hassan", "p": ["images/media/m74.jpg"]}, {"c": "With Mr. M.S. Shanmugam IAS, Secretary to the Chief Minister of Tamil Nadu", "p": ["images/media/m75.jpg"]}, {"c": "With Mr. V. Irai Anbu IAS, Chief Secretary, Government of Tamil Nadu", "p": ["images/media/m76.jpg"]}];
+const grid=document.getElementById('grid'),chips=[...document.querySelectorAll('.chip')];
+chips.forEach(c=>c.onclick=()=>{chips.forEach(x=>x.classList.toggle('on',x===c));const f=c.dataset.f;grid.querySelectorAll('.alb').forEach(a=>a.classList.toggle('hide',f!=='all'&&a.dataset.cat!==f));try{localStorage.setItem('gal-f',f)}catch(e){}});
+try{const f=localStorage.getItem('gal-f');if(f){const c=chips.find(x=>x.dataset.f===f);c&&c.click()}}catch(e){}
+const vw=document.getElementById('vw'),img=document.getElementById('vwImg'),cap=document.getElementById('vwCap'),cnt=document.getElementById('vwCount'),th=document.getElementById('vwTh'),P=document.getElementById('vwP'),N=document.getElementById('vwN');
+let al=0,ix=0,last=null;
+const show=k=>{const p=A[al].p;ix=Math.max(0,Math.min(p.length-1,k));img.classList.add('fade');const s=p[ix];const pre=new Image();pre.onload=pre.onerror=()=>{img.src=s;img.alt=A[al].c;img.classList.remove('fade')};pre.src=s;
+ cnt.textContent=p.length>1?(ix+1)+' / '+p.length:'';P.disabled=ix===0;N.disabled=ix===p.length-1;P.hidden=N.hidden=p.length<2;
+ [...th.children].forEach((b,j)=>b.classList.toggle('on',j===ix));const b=th.children[ix];b&&b.scrollIntoView({block:'nearest',inline:'center'})};
+const open=i=>{al=i;last=document.activeElement;cap.textContent=A[i].c;th.innerHTML=A[i].p.length>1?A[i].p.map((s,j)=>'<button aria-label="Photo '+(j+1)+'"><img src="'+s+'" alt=""></button>').join(''):'';
+ [...th.children].forEach((b,j)=>b.onclick=()=>show(j));vw.classList.add('open');document.body.style.overflow='hidden';show(0);document.getElementById('vwX').focus()};
+const close=()=>{vw.classList.remove('open');document.body.style.overflow='';last&&last.focus()};
+grid.querySelectorAll('.alb').forEach(a=>{a.onclick=()=>open(+a.dataset.i);a.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(+a.dataset.i)}}});
+P.onclick=()=>show(ix-1);N.onclick=()=>show(ix+1);document.getElementById('vwX').onclick=close;
+vw.addEventListener('click',e=>{if(e.target===vw||e.target.classList.contains('vw-stage'))close()});
+addEventListener('keydown',e=>{if(!vw.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(ix+1);if(e.key==='ArrowLeft')show(ix-1)});
+let sx=null;img.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});img.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)show(dx<0?ix+1:ix-1);sx=null});
+</script>
+</body>
+</html>

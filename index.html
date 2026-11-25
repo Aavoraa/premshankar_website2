@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. S Prem Shankar</title>
+<meta name="description" content="Dr. S Prem Shankar — Chairman, Holy Sai Group of Institutions. Over 30 years of excellence in education. Believe | Build | Become.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Herr+Von+Muellerhoff&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600;1,700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000000; --bg-2:#0B0B0B; --card:#141414; --card-2:#1B1B1B; --line:#262626; --line-strong:#3A3A3A; --text:#FFFFFF; --ink2:#E6E6E6; --muted:#A3A3A3; --dim:#6B6B6B; --magenta:#E5E5E5; --magenta-deep:#262626; --magenta-soft:#BDBDBD; --accent:#8C8C8C; --hero-tint:#000000; --glow-a:rgba(255,255,255,.06); --glow-b:rgba(255,255,255,.02); --glow-c:rgba(255,255,255,0); --nav-bg:#0a0a0acc; --shadow:#000000cc; --hover:#ffffff14; --on-text:#000000; --ov:0,0,0;
+  --head:"Archivo Narrow","Arial Narrow",system-ui,sans-serif; --body:"Poppins",system-ui,sans-serif;
+  --wrap:1180px; --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-weight:300;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--head);font-weight:700;text-transform:uppercase;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(34px,4.6vw,56px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--magenta);margin-bottom:18px}
+.eyebrow svg{width:16px;height:16px;color:var(--magenta)}
+::selection{background:var(--magenta);color:#fff}
+.rule{width:110px;height:2px;background:linear-gradient(90deg,var(--magenta),var(--accent));margin:26px 0}
+.muted{color:var(--muted)}
+section{position:relative}
+
+/* nav */
+.nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:6px;padding:6px;border:1px solid var(--line);border-radius:999px;background:var(--nav-bg);backdrop-filter:blur(14px);box-shadow:0 8px 30px var(--shadow)}
+.nav a{white-space:nowrap;padding:8px 16px;border-radius:999px;font-size:13px;color:var(--ink2);transition:.25s}
+.nav a:hover{background:var(--hover);color:var(--magenta)}
+.nav a.cta{background:#fff;color:#000}.nav a.cta:hover{background:#d9d9d9}
+.nav .brand{display:flex;align-items:center;gap:8px;color:var(--text);font-weight:500}
+.nav .brand i{width:26px;height:26px;border-radius:50%;background:url(images/author.jpeg) center/cover;display:block}
+@media (max-width:640px){.nav a:not(.brand):not(.cta){display:none}}
+
+/* hero */
+.hero{min-height:100vh;position:relative;overflow:hidden;background:#000}
+.hero-grid{min-height:100vh;display:grid;grid-template-columns:auto auto 44px;justify-content:center;align-items:center;gap:0 28px;position:relative;padding:0 24px}
+.hero-copy{position:relative;z-index:3;padding:80px 0}
+.hello{font-family:var(--body);font-weight:400;font-size:clamp(24px,2.2vw,32px);text-transform:none;margin-bottom:4px;color:#fff}
+.hello span{display:inline-block;animation:wave 2.4s ease-in-out infinite;transform-origin:70% 70%}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(14deg)}20%,40%{transform:rotate(-8deg)}}
+.hero-name{color:#fff;font-family:var(--head);text-transform:uppercase;font-weight:700;font-size:clamp(48px,5.2vw,110px);line-height:.92;letter-spacing:-.01em;white-space:nowrap;margin:0 0 14px}
+.hero-copy p{max-width:440px;color:#e2e2e2;font-size:14px;line-height:1.3}
+.sign{font-family:"Herr Von Muellerhoff",cursive;font-size:clamp(58px,5vw,80px);line-height:1.1;margin-top:30px;rotate:-4deg;transform-origin:left bottom;color:#fff;display:inline-block;white-space:nowrap;border-bottom:1px solid #ffffffaa;padding:0 30px 2px 0}
+.hero-photo{position:relative;height:min(90vh,840px);aspect-ratio:.8;margin-left:-100px;z-index:1;align-self:end}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 0;position:relative;z-index:1;-webkit-mask-image:linear-gradient(180deg,#000 55%,rgba(0,0,0,.55) 75%,transparent 97%),linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(180deg,#000 55%,rgba(0,0,0,.55) 75%,transparent 97%),linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
+.social{display:flex;flex-direction:column;gap:14px;z-index:3}
+.social a{width:32px;height:32px;border-radius:50%;background:#e9e9e9;color:#000;display:grid;place-items:center;transition:.25s}
+.social a:hover{transform:scale(1.12);background:#fff}
+.social svg{width:15px;height:15px}
+.nav{transition:opacity .4s,transform .4s}
+.nav.hide{opacity:0;pointer-events:none;transform:translate(-50%,-20px)}
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-photo{order:-1;height:auto;width:calc(100% + 48px);margin:0 -24px;max-height:72vh;justify-self:center}
+  .hero-copy{padding:0 0 30px;margin-top:-30px}
+  .hero-name{font-size:clamp(44px,13vw,90px)}
+  .sign{font-size:44px;margin-top:28px}
+  .social{flex-direction:row;padding-bottom:50px}
+}
+
+/* marquee */
+.marquee{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.track{display:flex;gap:60px;width:max-content;animation:scroll 40s linear infinite}
+.track span{display:flex;align-items:center;gap:12px;font-family:var(--head);font-weight:600;font-size:22px;color:var(--dim);white-space:nowrap;text-transform:uppercase}
+.track span::before{content:"";width:22px;height:22px;border:2px solid var(--magenta-deep);border-radius:50%}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* experience */
+.exp{padding:130px 0}
+.exp-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}
+.sticky{position:sticky;top:120px}
+.sticky p{max-width:360px;color:var(--muted)}
+.cards{display:flex;flex-direction:column;gap:22px}
+.role{position:sticky;top:120px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px 32px;display:grid;grid-template-columns:62px 1fr;gap:22px;box-shadow:0 -14px 30px var(--shadow)}
+.role .num{width:62px;height:62px;border-radius:50%;border:1px solid var(--magenta);color:var(--magenta);display:grid;place-items:center;font-size:15px}
+.role h3{font-size:22px;margin-bottom:4px}
+.role .org{color:var(--ink2);font-size:15px}
+.role .meta{color:var(--dim);font-size:13px;margin-top:2px}
+@media (max-width:900px){.exp-grid{grid-template-columns:1fr}.sticky{position:static}.role{grid-template-columns:1fr;position:static}}
+
+/* education */
+.edu{background:var(--bg-2);padding:130px 0;border-top:1px solid var(--line)}
+.edu .wrap h2{font-size:clamp(30px,3.6vw,46px)}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.edu-photo{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5}
+.edu-photo img{width:100%;height:100%;object-fit:cover;object-position:60% 20%;transition:transform 1.2s}
+.edu-photo:hover img{transform:scale(1.05)}
+.degree{padding:26px 0;border-bottom:1px solid var(--line)}
+.degree:first-of-type{border-top:1px solid var(--line)}
+.degree h3{font-size:24px}
+.degree .yr{font-family:var(--head);font-size:13px;letter-spacing:.14em;color:var(--magenta);margin-bottom:6px}
+@media (max-width:900px){.edu-grid{grid-template-columns:1fr;gap:40px}}
+
+/* stats */
+.stats{padding:110px 0 40px}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.stat{padding:42px 30px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;color:var(--text);font-family:var(--head);font-weight:700;font-size:clamp(52px,6vw,84px);line-height:1}
+.stat span{color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-size:12px}
+@media (max-width:800px){.stat-grid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* mission / vision */
+.mv{padding:110px 0}
+.mv-head{text-align:center;max-width:820px;margin:0 auto 60px}
+.mv-head h2{font-size:clamp(40px,7vw,96px);font-weight:700}
+.mv-head h2 em{font-style:normal;color:var(--magenta)}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.mv-card{background:var(--card);border-radius:var(--r);padding:42px;border:1px solid var(--line);border-top:3px solid var(--magenta)}
+.mv-card h3{font-size:30px;margin-bottom:16px}
+.mv-card p{color:var(--muted)}
+.mv-card ul{list-style:none;margin-top:18px;display:grid;gap:10px}
+.mv-card li{display:flex;gap:12px;color:var(--ink2);font-size:14px}
+.mv-card li::before{content:"";flex:none;width:6px;height:6px;margin-top:9px;border-radius:50%;background:var(--magenta)}
+@media (max-width:800px){.mv-grid{grid-template-columns:1fr}.mv-card{padding:30px}}
+
+/* giving back */
+.give{background:var(--bg-2);border-top:1px solid var(--line)}
+.give-banner{height:80vh;min-height:460px;background:url(images/g13.jpeg) 50% 45%/cover;position:relative}
+.give-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(var(--ov),.2) 0,rgba(var(--ov),0) 30%,rgba(var(--ov),.55) 62%,rgba(var(--ov),.5) 82%,var(--bg-2) 100%),linear-gradient(90deg,rgba(var(--ov),.6) 0,rgba(var(--ov),0) 60%)}
+.give-banner h2{color:#fff;position:absolute;left:0;right:0;bottom:90px;z-index:2;font-size:clamp(44px,8vw,120px);font-weight:700;line-height:.9}
+.give-banner h2 span{display:block;color:#ffffffb3;font-size:.45em;font-weight:600}
+.give-body{padding:40px 0 120px}
+.give-top{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:46px}
+.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prog{background:var(--card);border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.prog .ph{aspect-ratio:16/10;overflow:hidden}
+.prog .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.prog:hover .ph img{transform:scale(1.06)}
+.prog div.tx{padding:24px 26px 28px}
+.prog h3{font-size:22px;margin-bottom:8px}
+.prog p{color:var(--muted);font-size:14px}
+@media (max-width:900px){.give-top,.programs{grid-template-columns:1fr}}
+
+/* quote */
+.quote{color:#fff;min-height:80vh;display:grid;place-items:center;text-align:center;background:linear-gradient(rgba(var(--ov),.82),rgba(var(--ov),.88)),url(images/quote-img.png) center/cover fixed;padding:120px 0}
+.quote .mark{font-family:var(--head);font-size:120px;line-height:.6;color:var(--accent)}
+.quote blockquote{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:clamp(32px,5vw,68px);line-height:1.02;max-width:980px;margin:20px auto}
+.quote cite{font-style:normal;letter-spacing:.24em;font-size:13px;color:#cfcfcf}
+.quote .story{max-width:640px;margin:46px auto 0;padding-top:30px;border-top:1px solid #ffffff22;color:#cfcfcf;font-size:15px}
+.quote .who{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:18px;font-size:13px;color:#cfcfcf}
+.quote .who img{width:42px;height:42px;border-radius:50%;object-fit:cover}
+@media (max-width:800px){.quote{background-attachment:scroll}}
+
+/* gallery */
+.gal{padding:130px 0}
+.gal-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:46px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:999px;background:#fff;color:#000;font-weight:500;font-size:14px;transition:.25s}
+.btn:hover{background:#d9d9d9;color:#000}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line-strong)}
+.btn.ghost:hover{border-color:var(--magenta);background:var(--magenta);color:#fff}
+.bento{columns:4 240px;column-gap:16px}
+.bento>*{break-inside:avoid;margin:0 0 16px;display:block}
+.tile{position:relative;border-radius:18px;overflow:hidden;background:var(--card);cursor:zoom-in}
+.tile img{width:100%;height:auto;transition:transform 1s}
+.tile:hover img{transform:scale(1.06);filter:none}
+.tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;font-size:12.5px;line-height:1.4;color:#fff;background:linear-gradient(transparent,rgba(var(--ov),.88));opacity:0;transform:translateY(8px);transition:.35s}
+.tile:hover figcaption{opacity:1;transform:none}
+.award-card{background:var(--magenta-deep);color:#fff;border-radius:18px;padding:30px 26px}
+.award-card b{font-family:var(--head);font-size:64px;font-weight:700;line-height:1}
+.award-card b sup{font-size:.4em;color:var(--accent)}
+.award-card h4{font-size:18px;margin:6px 0 8px}
+.award-card p{font-size:13px;color:#ffffffcc}
+@media (max-width:900px){.bento{columns:2 150px}.tile figcaption{opacity:1;transform:none}}
+
+/* quote banner */
+.qb-sec{padding:40px 0 100px}
+.qb{position:relative;margin:0;border-radius:14px;overflow:hidden;aspect-ratio:1527/822;max-height:86vh;min-height:360px;box-shadow:0 30px 70px #0009}
+.qb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%}
+.qb::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#140b06d9 0,#140b06a6 30%,#140b0626 55%,#0000 72%)}
+.qb-txt{position:absolute;z-index:1;left:clamp(24px,7%,110px);top:50%;transform:translateY(-50%);max-width:min(540px,52%)}
+.qb-mark{font:700 92px/.6 "Playfair Display",serif;color:#E9C46A;height:44px}
+.qb blockquote{font:400 clamp(24px,2.7vw,42px)/1.3 "Playfair Display",serif;color:#fff;margin:6px 0 26px;text-shadow:0 2px 18px #0006}
+.qb blockquote em{font-style:italic;font-weight:700;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:6px}
+.qb figcaption{font:600 15px Poppins,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#E9C46A}
+@media (max-width:760px){.qb{aspect-ratio:auto;min-height:520px}.qb img{object-position:70% 40%}.qb::after{background:linear-gradient(0deg,#140b06f2 0,#140b06b3 45%,#140b0626 75%,#0000 100%)}.qb-txt{top:auto;bottom:28px;transform:none;max-width:none;right:24px}.qb-mark{font-size:70px;height:32px}}
+
+/* gallery: expanding panels */
+.acc{display:flex;gap:12px;height:min(560px,68vh);margin-top:6px}
+.acc-p{position:relative;flex:1;min-width:0;margin:0;border-radius:18px;overflow:hidden;cursor:pointer;background:#111;outline:none;transition:flex .75s cubic-bezier(.2,.75,.2,1)}
+.acc-p.on{flex:5.2;cursor:zoom-in}
+.acc-p img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;filter:grayscale(.75) brightness(.55);transform:scale(1.08);transition:filter .6s,transform 1s}
+.acc-p.on img{filter:none;transform:scale(1)}
+.acc-p:focus-visible{box-shadow:0 0 0 2px #fff}
+.acc-n{position:absolute;top:18px;left:50%;transform:translateX(-50%);font:700 18px var(--head);color:#fff;opacity:.85;transition:opacity .4s}
+.acc-p.on .acc-n{opacity:0}
+.acc-c{position:absolute;left:0;right:0;bottom:0;padding:70px 28px 26px;background:linear-gradient(transparent,#000d);color:#fff;font-size:16px;line-height:1.45;opacity:0;transform:translateY(14px);transition:opacity .45s .15s,transform .45s .15s}
+.acc-p.on .acc-c{opacity:1;transform:none}
+.acc-k{display:block;font:600 12px Poppins,sans-serif;letter-spacing:.2em;color:#cfcfcf;margin-bottom:6px}
+@media (max-width:760px){
+  .acc{flex-direction:column;height:auto;gap:8px}
+  .acc-p{flex:none;height:62px;transition:height .6s cubic-bezier(.2,.75,.2,1)}
+  .acc-p.on{flex:none;height:320px}
+  .acc-n{left:18px;top:50%;transform:translateY(-50%)}
+  .acc-c{padding:50px 18px 16px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){.acc-p,.acc-p img,.acc-c{transition:none}}
+
+/* journal (two-state flip-book) */
+.journal{position:relative;padding:120px 0 130px;overflow:hidden;background:#0b0b0b}
+.j-bg{position:absolute;inset:-20px;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:1fr;gap:8px;opacity:.38;filter:grayscale(.35) brightness(.85);animation:jbg 40s ease-in-out infinite alternate}
+.j-bg img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.journal::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 55% 60% at 50% 55%,#0b0b0bf2 0,#0b0b0bc0 45%,#0b0b0b70 75%,#0b0b0b40 100%),linear-gradient(180deg,#0b0b0b 0,#0b0b0b00 18%,#0b0b0b00 82%,#0b0b0b 100%)}
+.journal .wrap{z-index:2}
+@keyframes jbg{from{transform:scale(1)}to{transform:scale(1.08) translate(-1%,-1%)}}
+@media (max-width:760px){.j-bg{grid-template-columns:repeat(3,1fr)}}
+.bk-side{position:absolute;top:50%;transform:translateY(-50%);z-index:20;width:56px;height:56px;border-radius:50%;border:1px solid #ffffff40;background:#000a;backdrop-filter:blur(8px);color:#fff;font-size:26px;cursor:pointer;transition:.25s}
+.bk-side:hover:not(:disabled){background:#fff;color:#000}
+.bk-side:disabled{opacity:.2;cursor:default}
+.bk-side.l{left:-84px}.bk-side.r{right:-84px}
+@media (max-width:1100px){.bk-side.l{left:-64px}.bk-side.r{right:-64px}.bk-side{width:46px;height:46px}}
+@media (max-width:760px){.bk-side{display:none}}
+.journal .wrap{position:relative;text-align:center}
+.journal .eyebrow{justify-content:center}
+.bk-stage{--pw:min(470px,calc((100vw - 64px) / 2),calc((100vh - 230px) * .737));position:relative;width:calc(var(--pw) * 2);height:calc(var(--pw) / .737);margin:46px auto 0}
+.book{position:absolute;top:0;left:0;width:calc(var(--pw) * 2);height:100%;perspective:2600px;transition:transform .9s cubic-bezier(.645,.045,.355,1);outline:none}
+.leaf{position:absolute;top:0;left:50%;width:50%;height:100%;container-type:inline-size;transform-origin:left center;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.645,.045,.355,1)}
+.leaf.flipped{transform:rotateY(-180deg)}
+.jp{position:absolute;inset:0;display:flex;flex-direction:column;text-align:left;padding:5cqw 5.2cqw 9.5cqw;color:#111;
+  background-color:#F4F3EF;background-image:radial-gradient(#0000000d .6px,transparent .7px);background-size:6px 6px;
+  border-radius:2px 6px 6px 2px;box-shadow:0 30px 70px #000c;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;cursor:pointer}
+.jp::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#00000024 0,#0000 6%,#0000 97%,#00000010 100%)}
+.jp.b{transform:rotateY(180deg);border-radius:6px 2px 2px 6px}
+.jp.b::after{background:linear-gradient(270deg,#00000024 0,#0000 6%,#0000 97%,#00000010 100%)}
+.jp .ed{display:flex;justify-content:space-between;gap:2cqw;border-top:1px solid #111;border-bottom:1px solid #111;padding:1.1cqw 0;font:500 max(8px,1.9cqw)/1.2 Poppins,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.jp .mast{font:700 7.6cqw/1.05 "Playfair Display",serif;color:#111;text-align:center;margin:2.4cqw 0 .6cqw;letter-spacing:-.01em}
+.jp .tag{font:italic 400 2.7cqw/1.3 "Playfair Display",serif;color:#555;text-align:center}
+.jp .dbl{border-top:4px double #111;margin:2.6cqw 0 3cqw}
+.jp .run{display:flex;justify-content:space-between;align-items:baseline;gap:2cqw;border-bottom:1px solid #111;padding-bottom:1.4cqw;margin-bottom:3cqw;font:italic 700 3.4cqw "Playfair Display",serif;color:#111;white-space:nowrap}
+.jp .run span{font:500 max(8px,1.9cqw) Poppins,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#555}
+.jp .ph{flex:1 1 auto;min-height:0;overflow:hidden;background:#ddd}
+.jp .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.jp .ph.short{flex:0 0 58cqw}
+.jp .k{font:600 max(9px,2.3cqw) Poppins,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#6b6b6b;margin:3.4cqw 0 1.4cqw}
+.jp h3{font:700 5.6cqw/1.12 "Playfair Display",serif;text-transform:none;letter-spacing:-.005em;color:#111}
+.jp .dek{font:italic 400 3.4cqw/1.35 "Playfair Display",serif;color:#555;margin-top:1.6cqw}
+.jp .ft{display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto;padding-top:3cqw}
+.jp .pg{font:500 max(9px,2.2cqw) Poppins,sans-serif;color:#777;position:absolute;left:0;right:0;bottom:2.6cqw;text-align:center;pointer-events:none}
+.jp .open{margin-left:auto;font:italic 600 3.6cqw "Playfair Display",serif;color:#111;background:none;border:0;border-bottom:1px solid #111;cursor:pointer;padding:0 0 2px}
+.jp .row{display:grid;grid-template-columns:1fr 1fr;gap:2.4cqw;margin-top:2.6cqw}
+.jp .row figure{margin:0}
+.jp .row img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.jp figcaption{font:italic 400 max(8px,1.9cqw)/1.35 "Playfair Display",serif;color:#555;margin-top:.8cqw}
+.jp blockquote{font:italic 700 5.2cqw/1.2 "Playfair Display",serif;color:#111;margin:3cqw 0 2.4cqw;padding-left:3cqw;border-left:.7cqw solid #111}
+.jp .body{font:400 max(10px,2.7cqw)/1.6 "Playfair Display",serif;color:#222}
+.jp .body::first-letter{float:left;font:700 9cqw/.8 "Playfair Display",serif;color:#111;margin:.8cqw 1.4cqw 0 0}
+.jp .by{display:flex;align-items:center;gap:2.4cqw;margin-top:3.4cqw;font:500 max(8px,2cqw)/1.4 Poppins,sans-serif;color:#111}
+.jp .by img{width:10cqw;height:10cqw;border-radius:50%;object-fit:cover}
+.jp.center{justify-content:center;align-items:center;text-align:center}
+.jp.center .bbb{font:500 max(8px,2.2cqw) Poppins,sans-serif;letter-spacing:.3em;text-transform:uppercase;margin:5cqw 0 6cqw}
+.jp.center p{font:400 max(10px,2.8cqw)/1.6 "Playfair Display",serif;color:#333}
+.jp.center a{color:#111;text-decoration:underline;text-underline-offset:3px}
+.jp.center .open{margin:6cqw 0 0}
+.jp.center .dbl{width:60%;margin:3cqw auto}
+.jp.cover-back{background-color:#F4F3EF}
+.jp.cover-back .mast{font-size:6.4cqw}
+.jp.cover-back .site{font:500 max(8px,2cqw) Poppins,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#555;margin-top:4cqw}
+.bk-ctrl{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:30px;color:#cfcfcf;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.bk-ctrl span{min-width:130px}
+.bk-ctrl button{width:44px;height:44px;border-radius:50%;border:1px solid #444;background:#111;color:#fff;font-size:18px;cursor:pointer;transition:.25s}
+.bk-ctrl button:hover:not(:disabled){background:#fff;color:#000}
+.bk-ctrl button:disabled{opacity:.3;cursor:default}
+.bk-hint{margin-top:10px;color:#8a8a8a;font-size:12px}
+@media (max-width:760px){
+  .bk-stage{--pw:min(calc(100vw - 32px),calc((100vh - 220px) * .737));width:var(--pw);overflow:hidden}
+}
+@media (prefers-reduced-motion:reduce){.leaf,.book{transition:none}}
+
+/* footer */
+footer{background:var(--bg-2);border-top:1px solid var(--line);padding:90px 0 40px}
+.cta-line{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;padding-bottom:70px;margin-bottom:60px;border-bottom:1px solid var(--line)}
+.cta-line h2{font-size:clamp(36px,6vw,80px);font-weight:700}
+.cta-line h2 em{font-style:normal;color:var(--magenta)}
+.foot{display:grid;grid-template-columns:auto 1fr 1fr;gap:60px;align-items:start}
+.up{width:170px;height:170px;border-radius:50%;border:1px solid var(--line-strong);display:grid;place-items:center;transition:.35s}
+.up svg{width:64px;height:64px;stroke:var(--dim);transition:.35s}
+.up:hover{border-color:var(--magenta)}.up:hover svg{stroke:var(--magenta);transform:translateY(-6px)}
+.foot h4{font-family:var(--body);font-weight:400;font-size:12px;letter-spacing:.2em;color:var(--dim);margin-bottom:16px}
+.foot p,.foot a{color:var(--ink2);font-size:15px}
+.foot .links{display:flex;gap:10px;margin-top:22px}
+.foot .links a{width:36px;height:36px;border-radius:50%;background:var(--text);color:var(--on-text);display:grid;place-items:center;transition:.25s}
+.foot .links a:hover{background:var(--magenta);color:#fff}
+.foot .links svg{width:15px;height:15px}
+.copy{margin-top:70px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--dim);font-size:13px}
+@media (max-width:800px){.foot{grid-template-columns:1fr;gap:40px}.up{width:120px;height:120px}}
+
+/* spotlight */
+.spot{padding:120px 0 60px}
+.spot-lead{max-width:520px;margin-top:14px}
+.spot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:46px}
+.spot-card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.spot-card .ph{aspect-ratio:4/5;overflow:hidden}
+.spot-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.spot-card:hover .ph img{transform:scale(1.05)}
+.spot-card h3{font-size:19px;margin:18px 20px 6px}
+.spot-card p{color:var(--muted);font-size:13.5px;margin:0 20px 22px}
+@media (max-width:900px){.spot-grid{grid-template-columns:1fr 1fr}}
+/* about */
+.about{padding:130px 0;border-top:1px solid var(--line);position:relative;overflow:hidden}
+.about::before{content:"ABOUT";position:absolute;right:-2vw;top:40px;font:700 clamp(120px,18vw,280px)/1 var(--head);color:#ffffff06;letter-spacing:-.02em;pointer-events:none}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center;position:relative}
+.ab-photo{position:relative;margin:0;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:#111}
+.ab-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(.2) contrast(1.05);transition:transform 1.2s,filter .6s}
+.ab-photo:hover img{transform:scale(1.04);filter:none}
+.ab-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:60px 26px 22px;background:linear-gradient(transparent,#000d);display:flex;flex-direction:column;font-size:13px;color:#cfcfcf}
+.ab-photo figcaption b{font:700 22px var(--head);text-transform:uppercase;color:#fff}
+.ab-body h2{font-size:clamp(44px,5.4vw,80px);line-height:.95;margin:4px 0 30px}
+.ab-lead{font-size:clamp(19px,1.7vw,24px);line-height:1.55;color:var(--muted);font-weight:300}
+.ab-lead b{color:#fff;font-weight:500}
+.ab-text{margin-top:18px;color:var(--muted);font-size:15.5px;max-width:560px}
+.ab-facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ab-facts div{padding:22px 18px 20px 0}
+.ab-facts div+div{padding-left:22px;border-left:1px solid var(--line)}
+.ab-facts b{display:block;font:700 clamp(36px,3.4vw,52px)/1 var(--head)}
+.ab-facts span{display:block;margin-top:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ab-sign{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:34px}
+.ab-sign .sig{font:400 clamp(52px,4.6vw,70px)/1 "Herr Von Muellerhoff",cursive;color:#fff;rotate:-4deg}
+.ab-sign .motto{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim)}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:44px}.ab-photo{aspect-ratio:4/4.4;max-width:480px}.ab-facts div{padding-right:10px}.ab-facts div+div{padding-left:12px}}
+/* story / connect */
+.story-cta{padding:120px 0;background:var(--bg-2);border-top:1px solid var(--line)}
+.story-wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:70px;align-items:center}
+.story-av{width:120px;height:120px;border-radius:50%;object-fit:cover;filter:grayscale(.15);margin-bottom:34px}
+.story-cta .mark{font-family:var(--head);font-size:110px;line-height:.5;color:var(--muted)}
+.story-cta blockquote{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:clamp(24px,2.6vw,38px);line-height:1.08;margin:18px 0}
+.story-cta .who{display:flex;flex-direction:column;color:var(--muted);font-size:14px}
+.story-cta .who b{color:var(--text);font-weight:500}
+.story-q{color:var(--muted);margin:26px 0 20px;max-width:560px}
+.story-q a{color:var(--text);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:900px){.story-wrap{grid-template-columns:1fr;gap:50px}}
+/* book page extras */
+.jp h3.s{font-size:4.6cqw;line-height:1.18}
+.jp .bgal{flex:1 1 0;min-height:0;display:grid;gap:1.4cqw;margin-top:2.4cqw}
+.jp .bgal img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:50% 18%;cursor:zoom-in;display:block}
+.jp .bgal.n7{grid-template-columns:repeat(3,1fr);grid-template-rows:2fr 1fr 1fr}
+.jp .bgal.n7 img:first-child,.jp .bgal.n3 img:first-child{grid-column:1/-1}
+.jp .bgal.n4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.jp .bgal.n3{grid-template-columns:1fr 1fr;grid-template-rows:1.6fr 1fr}
+.jp .bgal.n1{grid-template-rows:1fr}
+.jp .note{font:italic 400 max(9px,2.3cqw) "Playfair Display",serif;color:#777;margin-top:1.2cqw}
+.jp .two{flex:1 1 0;min-height:0;display:grid;grid-template-rows:1fr 1fr;gap:4.4cqw}
+.jp .ph.fit{position:relative;background:#e7e3dc}
+.jp .ph.fit img{position:relative;object-fit:contain;object-position:50% 50%}
+.jp .ph.fit img.bk{position:absolute;inset:0;object-fit:cover;filter:blur(14px) saturate(.9) brightness(.92);transform:scale(1.15);opacity:.85;cursor:default;pointer-events:none}
+.jp .story{display:flex;flex-direction:column;min-height:0}
+.jp .story .ph{flex:1 1 0;min-height:0}
+.jp .story .ph img{cursor:zoom-in}
+.jp .story .k{margin:1.8cqw 0 .6cqw}
+.jp .story h4{font:700 3.75cqw/1.22 "Playfair Display",serif;text-transform:none;color:#111}
+.jp .desk{display:flex;align-items:center;gap:3cqw;padding-bottom:3cqw;border-bottom:1px solid #111}
+.jp .desk img{width:15cqw;height:15cqw;border-radius:50%;object-fit:cover}
+.jp .desk b{display:block;font:700 4cqw "Playfair Display",serif}
+.jp .desk span{font:400 max(9px,2.4cqw) Poppins,sans-serif;color:#555}
+.jp .motto{font:italic 700 5.4cqw/1.1 "Playfair Display",serif;text-align:center;margin:4cqw 0 1cqw}
+.jp .motto.end{font-size:5cqw;margin:3cqw 0 0}
+.jp .toc,.jp .honour{list-style:none;margin:0;padding:0}
+.jp .toc li{display:flex;align-items:baseline;gap:1.4cqw;font:400 max(10px,3.2cqw)/1.9 "Playfair Display",serif}
+.jp .toc i{flex:1;border-bottom:1px dotted #888;transform:translateY(-.6cqw)}
+.jp .toc b{font-family:Poppins,sans-serif;font-weight:600;font-size:max(9px,2.6cqw)}
+.jp .honour li{font:400 max(9.5px,2.8cqw)/1.45 "Playfair Display",serif;color:#222;padding:1.2cqw 0 1.2cqw 3.4cqw;border-bottom:1px solid #0001;position:relative}
+.jp .honour li::before{content:"★";position:absolute;left:0;top:1.2cqw;font-size:max(7px,1.8cqw);color:#111}
+.jp .center-open{align-self:center;margin:2.6cqw 0 0}
+
+/* guest book */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.gb{position:relative;background:#161616;border:1px solid #2e2e2e;border-radius:14px;padding:12px 12px 12px 30px;box-shadow:0 40px 80px #000c}
+.gb::before{content:"";position:absolute;left:15px;top:14px;bottom:14px;border-left:1px dashed #ffffff33}
+.gb-page{position:relative;background-color:#F4F3EF;background-image:radial-gradient(#0000000d .6px,transparent .7px);background-size:6px 6px;color:#111;border-radius:4px 10px 10px 4px;padding:46px clamp(22px,4vw,44px) 34px;box-shadow:inset 18px 0 22px -18px #0006}
+.gb-ribbon{position:absolute;top:-12px;right:40px;width:28px;height:112px;background:linear-gradient(90deg,#111,#3a3a3a 50%,#111);clip-path:polygon(0 0,100% 0,100% 100%,50% 84%,0 100%);box-shadow:0 4px 8px #0004}
+.gb-k{font:600 12px Poppins,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:#6b6b6b}
+.gb-h{font:700 clamp(32px,3.4vw,48px)/1.05 "Playfair Display",serif;text-transform:none;letter-spacing:-.01em;color:#111;margin:12px 60px 4px 0}
+.gb-orn{font-size:26px;line-height:1;color:#6b6b6b;margin-bottom:10px}
+.gb-field{position:relative;display:block;border-bottom:1px solid #cfc9bf;margin-top:16px;transition:border-color .25s}
+.gb-field:focus-within{border-color:#111}
+.gb-field input,.gb-field textarea{width:100%;border:0;background:transparent;font:italic 400 19px "Playfair Display",serif;color:#111;padding:12px 44px 10px 0;outline:none}
+.gb-field input::placeholder,.gb-field textarea::placeholder{color:#9a948a}
+.gb-field svg{position:absolute;right:4px;top:13px;width:22px;height:22px;color:#111;pointer-events:none}
+.gb-field.bad{border-color:#b3261e}
+.gb-msg textarea{resize:vertical;min-height:152px;line-height:38px;padding-top:0;background-image:repeating-linear-gradient(transparent 0 37px,#ddd7cd 37px 38px)}
+.gb-err{color:#b3261e;font-size:13px;margin:14px 0 0}
+.gb-send{width:100%;margin-top:26px;padding:17px;border:0;border-radius:6px;background:#111;color:#fff;font:600 17px Poppins,sans-serif;letter-spacing:.02em;cursor:pointer;transition:.25s}
+.gb-send:hover{background:#333}
+.gb-note{font:italic 400 13px "Playfair Display",serif;color:#777;margin:12px 0 0;text-align:center}
+@media (max-width:600px){.gb-field input,.gb-field textarea{font-size:16px;padding-right:34px}.gb{padding:8px 8px 8px 22px}.gb::before{left:11px}.gb-ribbon{right:22px;height:90px}.gb-h{margin-right:44px}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(var(--ov),.95);z-index:100;display:none;place-items:center;padding:30px}
+.lb.open{display:grid}
+.lb img{max-height:80vh;max-width:min(1100px,100%);border-radius:12px}
+.lb p{text-align:center;margin-top:14px;color:#ccc;font-size:14px;max-width:700px}
+.lb button{position:absolute;top:20px;right:24px;background:none;border:0;color:#fff;font-size:34px;cursor:pointer}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.track,.hello span{animation:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav hide">
+  <a href="#top" class="brand"><i></i>Prem Shankar</a>
+  <a href="#about">About</a>
+  <a href="#journal">Journal</a>
+  <a href="#gallery">Media</a>
+  <a href="#connect" class="cta">Connect</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="hello rv">Hello, I’m <span>👋</span></div>
+      <h1 class="hero-name rv">Prem Shankar</h1>
+      <p class="rv">Introducing Dr. S Prem Shankar — with over 30 years of excellence in education, he has been at the forefront of transforming education through purpose-driven leadership as Chairman of the Holy Sai Group of Institutions.</p>
+      <div class="sign rv">Prem Shankar</div>
+    </div>
+    <div class="hero-photo"><img src="images/hero-cutout.webp" alt="Dr. S Prem Shankar" fetchpriority="high"></div>
+    <div class="social">
+      <a href="https://www.facebook.com/share/1AAgL6kYaB/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6c0-.9.6-1.1 1-1.1h2.6V1H14c-4 0-4.9 3-4.9 4.9V8H7v4h2.1v11H14V12h3.3l.4-4z"/></svg></a>
+      <a href="https://www.linkedin.com/in/dr-s-prem-shankar-0773093ab" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+      <a href="mailto:chairman@holysai.org" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-label="Recognised by">
+  <div class="track">
+    <span>Recognised by</span><span>TACS</span><span>Cambridge</span><span>QS I·Gauge</span><span>UDSFSA Association</span><span aria-hidden="true">Recognised by</span><span aria-hidden="true">TACS</span><span aria-hidden="true">Cambridge</span><span aria-hidden="true">QS I·Gauge</span><span aria-hidden="true">UDSFSA Association</span>
+    <span aria-hidden="true">Recognised by</span><span aria-hidden="true">TACS</span><span aria-hidden="true">Cambridge</span><span aria-hidden="true">QS I·Gauge</span><span aria-hidden="true">UDSFSA Association</span><span aria-hidden="true">Recognised by</span><span aria-hidden="true">TACS</span><span aria-hidden="true">Cambridge</span><span aria-hidden="true">QS I·Gauge</span><span aria-hidden="true">UDSFSA Association</span>
+  </div>
+</div>
+
+<!-- LEADERSHIP -->
+<section class="exp" id="leadership">
+  <div class="wrap exp-grid">
+    <div class="sticky">
+      <div class="eyebrow rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4 9 15M20 4l-6 16-3-7-7-3z"/></svg>Leadership</div>
+      <h2 class="rv">Many roles.<br>One mission.</h2>
+      <div class="rule"></div>
+      <p class="rv">A legacy of leadership and a vision for the future — his leadership spans multiple roles, all committed to one goal: transforming education.</p>
+    </div>
+    <div class="cards">
+      <article class="role"><div class="num">08</div><div><h3>Chairman</h3><div class="org">Holy Sai Group of Institutions</div><div class="meta">Chennai, Tamil Nadu</div></div></article>
+      <article class="role"><div class="num">07</div><div><h3>Managing Trustee</h3><div class="org">Shiridi Sai Educational &amp; Charitable Trust</div></div></article>
+      <article class="role"><div class="num">06</div><div><h3>Managing Director</h3><div class="org">Primrose Properties</div></div></article>
+      <article class="role"><div class="num">05</div><div><h3>President</h3><div class="org">Tamil Nadu Association for Cambridge Schools (TACS)</div></div></article>
+      <article class="role"><div class="num">04</div><div><h3>Secretary</h3><div class="org">United District Self Financing Schools Association (UDSFSA)</div></div></article>
+      <article class="role"><div class="num">03</div><div><h3>Project Director</h3><div class="org">MAA Foundation (MAstering Agriculture)</div></div></article>
+      <article class="role"><div class="num">02</div><div><h3>Founder</h3><div class="org">Yarra Education Group Private Limited</div></div></article>
+      <article class="role"><div class="num">01</div><div><h3>Advisory Panel Member</h3><div class="org">Leading educational institutions</div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- SPOTLIGHT -->
+<section class="spot" id="legacy">
+  <div class="wrap">
+    <div class="eyebrow rv">Recognition</div>
+    <h2 class="rv">A legacy of leadership</h2>
+    <p class="muted rv spot-lead">A vision for the future — committed to excellence in every leadership role.</p>
+    <div class="spot-grid">
+      <article class="spot-card rv"><div class="ph"><img src="images/gal35.jpeg" alt="Receiving the Tamil Nadu Government Award" loading="lazy"></div><h3>Government Honour</h3><p>Tamil Nadu Government Award for supporting education in government schools.</p></article>
+      <article class="spot-card rv"><div class="ph"><img src="images/gal36.jpeg" alt="Goodwill ambassador recognition" loading="lazy"></div><h3>Goodwill Ambassador</h3><p>State level coordinator (International School).</p></article>
+      <article class="spot-card rv"><div class="ph"><img src="images/gal38.jpeg" alt="With the Hon'ble Speaker, Tamil Nadu Legislative Assembly" loading="lazy"></div><h3>In Good Company</h3><p>With Thiru. J.C.D. Prabhakar, Hon’ble Speaker, Tamil Nadu Legislative Assembly.</p></article>
+      <article class="spot-card rv"><div class="ph"><img src="images/gal39.jpeg" alt="QS I-Gauge Gold rating" loading="lazy"></div><h3>QS I-Gauge Gold</h3><p>Global School Rating — Gold for Holy Sai International School, Chennai.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="qb-sec">
+  <div class="wrap">
+    <figure class="qb rv">
+      <img src="images/banner-1.webp" alt="Dr. S Prem Shankar seated in his office" loading="lazy">
+      <div class="qb-txt">
+        <div class="qb-mark" aria-hidden="true">“</div>
+        <blockquote><em>Nothing in life</em> is a problem –<br><em>everything is a possibility.</em></blockquote>
+        <figcaption>Dr. S Prem Shankar</figcaption>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- JOURNAL -->
+<section class="journal" id="journal">
+  <div class="j-bg" aria-hidden="true"><img src="images/g10.jpg" alt="" loading="lazy"><img src="images/g14.jpg" alt="" loading="lazy"><img src="images/book/b05.webp" alt="" loading="lazy"><img src="images/g21.jpg" alt="" loading="lazy"><img src="images/g12.jpg" alt="" loading="lazy"><img src="images/book/b26.webp" alt="" loading="lazy"><img src="images/g16.jpg" alt="" loading="lazy"><img src="images/g23.jpeg" alt="" loading="lazy"><img src="images/book/b12.webp" alt="" loading="lazy"><img src="images/g20.jpeg" alt="" loading="lazy"><img src="images/g02.jpg" alt="" loading="lazy"><img src="images/g22.jpeg" alt="" loading="lazy"><img src="images/book/b30.webp" alt="" loading="lazy"><img src="images/g11.jpg" alt="" loading="lazy"><img src="images/g04.jpg" alt="" loading="lazy"><img src="images/g17.jpeg" alt="" loading="lazy"><img src="images/book/b36.webp" alt="" loading="lazy"><img src="images/g13.jpeg" alt="" loading="lazy"></div>
+    <div class="wrap">
+    <div class="eyebrow rv">Our news and blog</div>
+    <h2 class="rv">From the Holy Sai Journal</h2>
+    <div class="bk-stage">
+    <button class="bk-side l" id="bkSideL" aria-label="Previous page">‹</button><button class="bk-side r" id="bkSideR" aria-label="Next page">›</button>
+    <div class="book" id="book" tabindex="0" aria-label="The Holy Sai Journal, use arrow keys to turn pages">
+      <div class="leaf">
+        <article class="jp f">
+          <div class="ed"><span>Chennai Edition</span><span class="jdate"></span><span>Believe · Build · Become</span></div>
+          <div class="mast">The Holy Sai Journal</div>
+          <div class="tag">News, ideas and moments from the Holy Sai Group of Institutions</div>
+          <div class="dbl"></div>
+          <div class="ph"><img src="images/blog1.jpg" alt="Ignite’25 – Educators Edition"></div>
+          <div class="k">Event</div>
+          <h3>Ignite’25 – Educators Edition</h3>
+          <div class="dek">100+ educators inspired by Holy Sai.</div>
+          <div class="ft"><button class="open" data-next>Open the Journal →</button></div>
+          <div class="pg">1</div>
+        </article>
+        <article class="jp b"><div class="run">The Holy Sai Journal<span>Front page · Page 2</span></div><div class="two"><div class="story"><div class="ph fit"><img class="bk" src="images/blog2.png" alt="" aria-hidden="true"><img src="images/blog2.png" alt="Hands-on sustainability at Pollachi’s Outdoor Learning Center"></div><div class="k">Sustainability</div><h4>Hands-on sustainability at Pollachi’s Outdoor Learning Center</h4></div><div class="story"><div class="ph fit"><img class="bk" src="images/blog3.png" alt="" aria-hidden="true"><img src="images/blog3.png" alt="Compassion in action — standing with the community in times of crisis"></div><div class="k">Community</div><h4>Compassion in action — standing with the community in times of crisis</h4></div></div><div class="pg">2</div></article>
+      </div>
+      <div class="leaf">
+        <article class="jp f"><div class="run">The Holy Sai Journal<span>Front page · Page 3</span></div>
+          <div class="desk"><img src="images/book/b22.webp" alt=""><div><div class="k" style="margin:0 0 .6cqw">From the Chairman’s desk</div><b>Dr. S Prem Shankar</b><span>Chairman, Holy Sai Group of Institutions</span></div></div>
+          <div class="motto">Believe. Build. Become.</div>
+          <div class="k">Inside this edition</div>
+          <ul class="toc"><li><span>Awards &amp; Recognition</span><i></i><b>4</b></li><li><span>Campus Life</span><i></i><b>7</b></li><li><span>Milestones &amp; Partnerships</span><i></i><b>10</b></li></ul>
+          <div class="k">Roll of honour · Recognition for Holy Sai</div>
+          <ul class="honour"><li>QS I-Gauge Global School Rating – Gold for Holy Sai International School, Chennai</li><li>Tamil Nadu Government Award for supporting education in government schools</li><li>Award for Integrating Technology in Education from Eldrok India</li><li>Goodwill Ambassador – State Level Coordinator (International Schools)</li></ul>
+          <div class="pg">3</div>
+        </article>
+        <article class="jp b"><div class="run">The Holy Sai Journal<span>Awards &amp; Recognition · Page 4</span></div><div class="k">Sports</div><h3 class="s">School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd</h3><div class="bgal n7"><img src="images/book/b14.webp" alt="School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd"><img src="images/book/b15.webp" alt="School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd"><img src="images/book/b18.webp" alt="School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd"><img src="images/book/b16.webp" alt="School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd"><img src="images/book/b19.webp" alt="School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd"><img src="images/book/b13.webp" alt="School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd"><img src="images/book/b17.webp" alt="School Sports Excellence Awards hosted by Sportylife India Pvt. Ltd"></div><div class="note">7 photos · tap a photo to see it up close</div><div class="pg">4</div></article>
+      </div>
+      <div class="leaf">
+        <article class="jp f"><div class="run">The Holy Sai Journal<span>Awards &amp; Recognition · Page 5</span></div><div class="k">Association</div><h3 class="s">UDSFSA Annual Awards 2026</h3><div class="bgal n7"><img src="images/book/b06.webp" alt="UDSFSA Annual Awards 2026"><img src="images/book/b10.webp" alt="UDSFSA Annual Awards 2026"><img src="images/book/b12.webp" alt="UDSFSA Annual Awards 2026"><img src="images/book/b07.webp" alt="UDSFSA Annual Awards 2026"><img src="images/book/b09.webp" alt="UDSFSA Annual Awards 2026"><img src="images/book/b11.webp" alt="UDSFSA Annual Awards 2026"><img src="images/book/b08.webp" alt="UDSFSA Annual Awards 2026"></div><div class="note">7 photos · tap a photo to see it up close</div><div class="pg">5</div></article>
+        <article class="jp b"><div class="run">The Holy Sai Journal<span>Awards &amp; Recognition · Page 6</span></div><div class="k">Innovation</div><h3 class="s">7th International Robotics Competition 2026 by Robotica</h3><div class="bgal n4"><img src="images/book/b05.webp" alt="7th International Robotics Competition 2026 by Robotica"><img src="images/book/b04.webp" alt="7th International Robotics Competition 2026 by Robotica"><img src="images/book/b02.webp" alt="7th International Robotics Competition 2026 by Robotica"><img src="images/book/b03.webp" alt="7th International Robotics Competition 2026 by Robotica"></div><div class="note">4 photos · tap a photo to see it up close</div><div class="pg">6</div></article>
+      </div>
+      <div class="leaf">
+        <article class="jp f"><div class="run">The Holy Sai Journal<span>Campus Life · Page 7</span></div><div class="k">Ceremony</div><h3 class="s">Investiture Ceremony'26 @ Holy Sai International School</h3><div class="bgal n7"><img src="images/book/b25.webp" alt="Investiture Ceremony'26 @ Holy Sai International School"><img src="images/book/b26.webp" alt="Investiture Ceremony'26 @ Holy Sai International School"><img src="images/book/b28.webp" alt="Investiture Ceremony'26 @ Holy Sai International School"><img src="images/book/b29.webp" alt="Investiture Ceremony'26 @ Holy Sai International School"><img src="images/book/b27.webp" alt="Investiture Ceremony'26 @ Holy Sai International School"><img src="images/book/b36.webp" alt="Investiture Ceremony'26 @ Holy Sai International School"><img src="images/book/b37.webp" alt="Investiture Ceremony'26 @ Holy Sai International School"></div><div class="note">7 photos · tap a photo to see it up close</div><div class="pg">7</div></article>
+        <article class="jp b"><div class="run">The Holy Sai Journal<span>Campus Life · Page 8</span></div><div class="two"><div class="story"><div class="ph fit"><img class="bk" src="images/book/b34.webp" alt="" aria-hidden="true"><img src="images/book/b34.webp" alt="Holy Sai Basketball Turf inaugurated, honouring Mr. T.M. Anbarasan, Minister for MS&amp;ME, Government of Tamil Nadu"></div><div class="k">Campus</div><h4>Holy Sai Basketball Turf inaugurated, honouring Mr. T.M. Anbarasan, Minister for MS&amp;ME, Government of Tamil Nadu</h4></div><div class="story"><div class="ph fit"><img class="bk" src="images/book/b35.webp" alt="" aria-hidden="true"><img src="images/book/b35.webp" alt="Grand Annual Event 2025, honouring Mr. Anbil Mahesh Poyyamozhi, School Education Minister of Tamil Nadu"></div><div class="k">Annual Event</div><h4>Grand Annual Event 2025, honouring Mr. Anbil Mahesh Poyyamozhi, School Education Minister of Tamil Nadu</h4></div></div><div class="pg">8</div></article>
+      </div>
+      <div class="leaf">
+        <article class="jp f"><div class="run">The Holy Sai Journal<span>Campus Life · Page 9</span></div><div class="two"><div class="story"><div class="ph fit"><img class="bk" src="images/book/b21.webp" alt="" aria-hidden="true"><img src="images/book/b21.webp" alt="Sports Meet 2019"></div><div class="k">Sports</div><h4>Sports Meet 2019</h4></div><div class="story"><div class="ph fit"><img class="bk" src="images/book/b30.webp" alt="" aria-hidden="true"><img src="images/book/b30.webp" alt="Felicitating Dr. Raja Hussain, the Registrar of Crescent University @ Chennai campus"></div><div class="k">Visitors</div><h4>Felicitating Dr. Raja Hussain, the Registrar of Crescent University @ Chennai campus</h4></div></div><div class="pg">9</div></article>
+        <article class="jp b"><div class="run">The Holy Sai Journal<span>Milestones &amp; Partnerships · Page 10</span></div><div class="k">Cambridge</div><h3 class="s">Representing Tamil Nadu state at Cambridge Community Meet in Bangalore</h3><div class="bgal n3"><img src="images/book/b24.webp" alt="Representing Tamil Nadu state at Cambridge Community Meet in Bangalore"><img src="images/book/b01.webp" alt="Representing Tamil Nadu state at Cambridge Community Meet in Bangalore"><img src="images/book/b20.webp" alt="Representing Tamil Nadu state at Cambridge Community Meet in Bangalore"></div><div class="note">3 photos · tap a photo to see it up close</div><div class="pg">10</div></article>
+      </div>
+      <div class="leaf">
+        <article class="jp f"><div class="run">The Holy Sai Journal<span>Milestones &amp; Partnerships · Page 11</span></div><div class="two"><div class="story"><div class="ph fit"><img class="bk" src="images/book/b33.webp" alt="" aria-hidden="true"><img src="images/book/b33.webp" alt="Signing of MoU with Sai University in the presence of Mr. Ramani, Chancellor &amp; Dr. Vivek Shivhare, Founding Director-Admissions"></div><div class="k">Partnership</div><h4>Signing of MoU with Sai University in the presence of Mr. Ramani, Chancellor &amp; Dr. Vivek Shivhare, Founding Director-Admissions</h4></div><div class="story"><div class="ph fit"><img class="bk" src="images/book/b31.webp" alt="" aria-hidden="true"><img src="images/book/b31.webp" alt="Handing over first copy of Holy Sai Group of Institutions Prospectus 2024-25 to the Hon’ble Educational Minister"></div><div class="k">Milestone</div><h4>Handing over first copy of Holy Sai Group of Institutions Prospectus 2024-25 to the Hon’ble Educational Minister</h4></div></div><div class="pg">11</div></article>
+        <article class="jp b"><div class="run">The Holy Sai Journal<span>Milestones &amp; Partnerships · Page 12</span></div><div class="k">Leadership</div><h3 class="s">In discussion with Education Minister, Mr. Anbil Mahesh and Cambridge International Education CEO, Mr. Peter Philips and other leadership teams</h3><div class="bgal n1"><img src="images/book/b32.webp" alt="In discussion with Education Minister and Cambridge International Education CEO"></div><div class="motto end">Believe | Build | Become</div><button class="open center-open" data-first>↺ Back to the cover</button><div class="pg">12</div></article>
+      </div>
+    </div>
+    </div>
+    <div class="bk-ctrl">
+      <button id="bkPrev" aria-label="Previous">‹</button>
+      <span id="bkNum">Cover</span>
+      <button id="bkNext" aria-label="Next">›</button>
+    </div>
+    <div class="bk-hint">Click the cover to open · click a page, swipe, or use ← → to turn</div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="edu" id="honours">
+  <div class="wrap edu-grid">
+    <div class="edu-photo rv"><img src="images/author.jpeg" alt="Dr. S Prem Shankar addressing an audience" loading="lazy"></div>
+    <div>
+      <div class="eyebrow rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg>Academic Honours</div>
+      <h2 class="rv">A rare blend of academic depth and institutional leadership</h2>
+      <div class="rule"></div>
+      <p class="muted rv" style="max-width:480px;margin-bottom:34px">Reflecting a lifelong investment in educational excellence — from the classroom to the boardroom, scholarship has always shaped how Dr. Prem Shankar leads.</p>
+      <div class="degree rv"><div class="yr">2018</div><h3>Doctorate in Education</h3></div>
+      <div class="degree rv"><div class="yr">2023</div><h3>Doctor of Philosophy (Education)</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <figure class="ab-photo rv">
+      <img src="images/Chairman.webp" alt="Dr. S Prem Shankar" loading="lazy">
+      <figcaption><b>Dr. S Prem Shankar</b><span>Chairman, Holy Sai Group of Institutions</span></figcaption>
+    </figure>
+    <div class="ab-body">
+      <div class="eyebrow rv">About</div>
+      <h2 class="rv">Dr. S Prem<br>Shankar</h2>
+      <p class="ab-lead rv">With over <b>30 years of excellence in education</b>, Dr. S Prem Shankar has been at the forefront of <b>transforming education through purpose-driven leadership</b>.</p>
+      <p class="ab-text rv">A legacy of leadership, a vision for the future — building foundations for future generations and redefining educational standards together.</p>
+      <div class="ab-facts rv">
+        <div><b>30+</b><span>Years in education</span></div>
+        <div><b>8</b><span>Leadership roles</span></div>
+        <div><b>2</b><span>Doctorates in Education</span></div>
+      </div>
+      <div class="ab-sign rv"><span class="sig">Prem Shankar</span><span class="motto">Believe · Build · Become</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gal" id="gallery">
+  <div class="wrap">
+    <div class="gal-head">
+      <div><div class="eyebrow rv">Media &amp; Photo Gallery</div><h2 class="rv">A gallery of<br>moments</h2></div>
+      <a class="btn ghost rv" href="gallery.html">View full gallery →</a>
+    </div>
+      <div class="acc rv">
+      <figure class="acc-p on" tabindex="0" role="button" aria-label="Tamil Nadu Government Award for supporting education in government schools"><img src="images/gal35.jpeg" alt="Tamil Nadu Government Award for supporting education in government schools"><span class="acc-n">01</span><figcaption class="acc-c"><span class="acc-k">01 / 08</span>Tamil Nadu Government Award for supporting education in government schools</figcaption></figure>
+      <figure class="acc-p" tabindex="0" role="button" aria-label="In discussion with Education Minister Mr. Anbil Mahesh and Cambridge International Education CEO Mr. Peter Philips"><img src="images/g18.jpeg" alt="In discussion with Education Minister Mr. Anbil Mahesh and Cambridge International Education CEO Mr. Peter Philips"><span class="acc-n">02</span><figcaption class="acc-c"><span class="acc-k">02 / 08</span>In discussion with Education Minister Mr. Anbil Mahesh and Cambridge International Education CEO Mr. Peter Philips</figcaption></figure>
+      <figure class="acc-p" tabindex="0" role="button" aria-label="At the Cambridge Schools South Asia Conclave 2024"><img src="images/g10.jpg" alt="At the Cambridge Schools South Asia Conclave 2024"><span class="acc-n">03</span><figcaption class="acc-c"><span class="acc-k">03 / 08</span>At the Cambridge Schools South Asia Conclave 2024</figcaption></figure>
+      <figure class="acc-p" tabindex="0" role="button" aria-label="Signing of MoU with Sai University in the presence of Mr. Ramani, Chancellor &amp; Dr. Vivek Shivhare, Founding Director-Admissions"><img src="images/g20.jpeg" alt="Signing of MoU with Sai University in the presence of Mr. Ramani, Chancellor &amp; Dr. Vivek Shivhare, Founding Director-Admissions"><span class="acc-n">04</span><figcaption class="acc-c"><span class="acc-k">04 / 08</span>Signing of MoU with Sai University in the presence of Mr. Ramani, Chancellor &amp; Dr. Vivek Shivhare, Founding Director-Admissions</figcaption></figure>
+      <figure class="acc-p" tabindex="0" role="button" aria-label="Award for Integrating Technology in Education from Eldrok India"><img src="images/g11.jpg" alt="Award for Integrating Technology in Education from Eldrok India"><span class="acc-n">05</span><figcaption class="acc-c"><span class="acc-k">05 / 08</span>Award for Integrating Technology in Education from Eldrok India</figcaption></figure>
+      <figure class="acc-p" tabindex="0" role="button" aria-label="Investiture Ceremony&#x27;26 @ Holy Sai International School"><img src="images/g14.jpg" alt="Investiture Ceremony&#x27;26 @ Holy Sai International School"><span class="acc-n">06</span><figcaption class="acc-c"><span class="acc-k">06 / 08</span>Investiture Ceremony&#x27;26 @ Holy Sai International School</figcaption></figure>
+      <figure class="acc-p" tabindex="0" role="button" aria-label="During the Victoria State, Australia tour 2023-24"><img src="images/g16.jpg" alt="During the Victoria State, Australia tour 2023-24"><span class="acc-n">07</span><figcaption class="acc-c"><span class="acc-k">07 / 08</span>During the Victoria State, Australia tour 2023-24</figcaption></figure>
+      <figure class="acc-p" tabindex="0" role="button" aria-label="Honouring Mr. Anbil Mahesh Poyyamozhi, School Education Minister of Tamil Nadu, at the Grand Annual Event 2025"><img src="images/g23.jpeg" alt="Honouring Mr. Anbil Mahesh Poyyamozhi, School Education Minister of Tamil Nadu, at the Grand Annual Event 2025"><span class="acc-n">08</span><figcaption class="acc-c"><span class="acc-k">08 / 08</span>Honouring Mr. Anbil Mahesh Poyyamozhi, School Education Minister of Tamil Nadu, at the Grand Annual Event 2025</figcaption></figure>
+  </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story-cta" id="connect">
+  <div class="wrap story-wrap">
+    <div class="story-left">
+      <img class="story-av rv" src="images/book/b23.webp" alt="Dr. S Prem Shankar" loading="lazy">
+      <div class="mark rv">“</div>
+      <blockquote class="rv">One day you will tell your story of how you overcame what you went through and it will be someone else's survival guide.</blockquote>
+      <div class="who rv"><b>Dr. S Prem Shankar</b><span>Chairman, Holy Sai Group of Institutions</span></div>
+      <p class="rv story-q">Questions or thoughts? Let's get connected, or email directly: <a href="mailto:chairman@holysai.org">chairman@holysai.org</a></p>
+    </div>
+    <div class="gb rv">
+      <div class="gb-page">
+        <span class="gb-ribbon" aria-hidden="true"></span>
+        <div class="gb-k">The Guest Book</div>
+        <h3 class="gb-h">Let's get Connected</h3>
+        <div class="gb-orn" aria-hidden="true">❦</div>
+        <form id="gbForm" novalidate>
+          <label class="gb-field"><span class="sr">Your name</span><input name="name" type="text" placeholder="Enter your name*" autocomplete="name" required><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></label>
+          <label class="gb-field"><span class="sr">Your email</span><input name="email" type="email" placeholder="Enter your email*" autocomplete="email" required><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3 6 9 7 9-7"/></svg></label>
+          <label class="gb-field"><span class="sr">Your phone number</span><input name="phone" type="tel" placeholder="Enter your phone number*" autocomplete="tel" pattern="\+?[0-9 ]{7,}" required><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h3l2 5-2.5 1.5a11 11 0 0 0 7 7L16 14l5 2v3a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg></label>
+          <label class="gb-field gb-msg"><span class="sr">Your message</span><textarea name="message" rows="4" placeholder="Enter your message"></textarea><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></label>
+          <p class="gb-err" role="alert" hidden></p>
+          <button type="submit" class="gb-send">Send message →</button>
+          <p class="gb-note">Sending opens your email app with the message addressed to chairman@holysai.org.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot">
+      <a href="#top" class="up" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M12 20V4M5 11l7-7 7 7"/></svg></a>
+      <div>
+        <h4>CONTACT ME</h4>
+        <p><a href="mailto:chairman@holysai.org">chairman@holysai.org</a></p>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/dr-s-prem-shankar-0773093ab" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+          <a href="https://www.facebook.com/share/1AAgL6kYaB/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6c0-.9.6-1.1 1-1.1h2.6V1H14c-4 0-4.9 3-4.9 4.9V8H7v4h2.1v11H14V12h3.3l.4-4z"/></svg></a>
+          <a href="mailto:chairman@holysai.org" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>OFFICE ADDRESS</h4>
+        <p>Holy Sai International School,<br>63, Jayalakshmi Nagar,<br>Adhanur, Guduvanchery,<br>Chennai – 603 202</p>
+      </div>
+    </div>
+    <div class="copy"><span>© 2026 premshankar.in · All Rights Reserved.</span><span>Believe | Build | Become</span></div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true"><button aria-label="Close">×</button><div><img alt=""><p></p></div></div>
+
+<script>
+// gallery expanding panels
+(()=>{const ps=[...document.querySelectorAll('.acc-p')];if(!ps.length)return;const fine=matchMedia('(hover:hover)');
+const on=p=>ps.forEach(x=>x.classList.toggle('on',x===p));
+const big=p=>{const lb=document.getElementById('lb');lb.querySelector('img').src=p.querySelector('img').src;lb.querySelector('p').textContent=p.getAttribute('aria-label');lb.classList.add('open')};
+ps.forEach(p=>{p.addEventListener('mouseenter',()=>{if(fine.matches)on(p)});p.addEventListener('focus',()=>on(p));
+ p.addEventListener('click',()=>{p.classList.contains('on')?big(p):on(p)});p.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();big(p)}})})})();
+// guest book -> email
+(()=>{const f=document.getElementById('gbForm');if(!f)return;const err=f.querySelector('.gb-err');
+f.addEventListener('submit',e=>{e.preventDefault();const bad=[...f.querySelectorAll('input')].filter(i=>!i.checkValidity());
+ f.querySelectorAll('.gb-field').forEach(l=>l.classList.remove('bad'));bad.forEach(i=>i.closest('.gb-field').classList.add('bad'));
+ if(bad.length){err.hidden=false;err.textContent=bad[0].name==='email'&&bad[0].value?'Please enter a valid email address.':bad[0].name==='phone'&&bad[0].value?'Please enter a valid phone number.':'Please fill in your name, email and phone number.';bad[0].focus();return}
+ err.hidden=true;const d=Object.fromEntries(new FormData(f));
+ const body='Name: '+d.name+'\nEmail: '+d.email+'\nPhone: '+d.phone+'\n\n'+(d.message||'');
+ location.href='mailto:chairman@holysai.org?subject='+encodeURIComponent('Guest Book message from '+d.name)+'&body='+encodeURIComponent(body);
+ f.querySelector('.gb-send').textContent='Opening your email app…';setTimeout(()=>f.querySelector('.gb-send').textContent='Send message →',4000)});
+f.querySelectorAll('input').forEach(i=>i.addEventListener('input',()=>{if(i.checkValidity())i.closest('.gb-field').classList.remove('bad')}))})();
+// journal two-state flip-book
+(()=>{const book=document.getElementById('book');if(!book)return;
+const leaves=[...book.querySelectorAll('.leaf')],L=leaves.length,mq=matchMedia('(max-width:760px)');
+const num=document.getElementById('bkNum'),prev=document.getElementById('bkPrev'),next=document.getElementById('bkNext'),sl=document.getElementById('bkSideL'),sr=document.getElementById('bkSideR');
+const d=document.querySelector('.jdate');if(d)d.textContent=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+const build=()=>{const st=[{f:0,s:'R'}];for(let f=1;f<L;f++){if(mq.matches){st.push({f,s:'L'},{f,s:'R'})}else st.push({f,s:'B'})}st.push({f:L,s:'L'});return st};
+let states=build(),idx=0,flips=0;
+const tx=st=>{if(mq.matches)return st.s==='R'?'-50%':'0%';return st.s==='R'?'-25%':st.s==='L'?'25%':'0%'};
+const z=()=>leaves.forEach((l,i)=>{if(!l.dataset.anim)l.style.zIndex=l.classList.contains('flipped')?i+1:L-i+1});
+const setFlips=f=>{while(flips<f){const l=leaves[flips];l.dataset.anim=1;l.style.zIndex=L+5;l.classList.add('flipped');flips++;setTimeout(()=>{delete l.dataset.anim;z()},1000)}
+ while(flips>f){flips--;const l=leaves[flips];l.dataset.anim=1;l.style.zIndex=L+5;l.classList.remove('flipped');setTimeout(()=>{delete l.dataset.anim;z()},1000)}};
+const label=st=>{if(st.f===0)return'Cover';if(st.f===L)return'Back cover';const a=st.f*2,b=a+1;return st.s==='B'?'Pages '+a+'–'+b:'Page '+(st.s==='L'?a:b)+' of '+(L*2)};
+const render=()=>{const st=states[idx];setFlips(st.f);book.style.transform='translateX('+tx(st)+')';num.textContent=label(st);prev.disabled=sl.disabled=idx===0;next.disabled=sr.disabled=idx===states.length-1;z()};
+const go=dir=>{const ni=idx+dir;if(ni<0||ni>=states.length)return;idx=ni;render()};
+const toFirst=()=>{const t=setInterval(()=>{if(idx===0)return clearInterval(t);go(-1)},180)};
+prev.onclick=()=>go(-1);next.onclick=()=>go(1);sl.onclick=()=>go(-1);sr.onclick=()=>go(1);
+book.addEventListener('click',e=>{if(e.target.closest('a'))return;const im=e.target.closest('.bgal img,.story .ph img');if(im){const lb=document.getElementById('lb');lb.querySelector('img').src=im.src;lb.querySelector('p').textContent=im.alt;lb.classList.add('open');return}if(e.target.closest('[data-first]'))return toFirst();if(e.target.closest('[data-next]'))return go(1);
+ const face=e.target.closest('.jp');if(!face)return;const onLeft=face.getBoundingClientRect().left<book.getBoundingClientRect().left+book.offsetWidth*.25;
+ if(mq.matches){const r=face.getBoundingClientRect();if(idx===states.length-1)return go(-1);return (e.clientX-r.left<r.width*.3)?go(-1):go(1)}
+ const st=states[idx];if(st.s==='L'&&st.f===L)return go(-1);onLeft&&st.s==='B'?go(-1):go(1)});
+book.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){go(1);e.preventDefault()}if(e.key==='ArrowLeft'){go(-1);e.preventDefault()}});
+let sx=null;book.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
+book.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40){e.preventDefault();go(dx<0?1:-1)}sx=null});
+mq.addEventListener('change',()=>{const f=states[idx].f;states=build();idx=states.findIndex(st=>st.f===f);render()});
+render()})();
+const nav=document.querySelector(".nav");const onS=()=>nav.classList.toggle("hide",scrollY<innerHeight*.6);addEventListener("scroll",onS,{passive:true});onS();
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// counters
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count,suf=el.dataset.suffix||'';let t0;const step=t=>{t0??=t;const p=Math.min((t-t0)/1600,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step);co.unobserve(el)}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+// lightbox
+const lb=document.getElementById('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p');
+document.querySelectorAll('.tile').forEach(t=>t.addEventListener('click',()=>{li.src=t.querySelector('img').src;lp.textContent=t.querySelector('figcaption').textContent;lb.classList.add('open')}));
+lb.addEventListener('click',e=>{if(e.target!==li)lb.classList.remove('open')});
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')});
+</script>
+</body>
+</html>
